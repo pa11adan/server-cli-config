@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	bat="cat /sys/class/power_supply/BAT?/capacity" \
+	cp="cp -iv" \
+	cpr="cp -irv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	rmf="rm -rvf" \
+	mkd="mkdir -pv" \
+	s="sudo" \
+	se="sudoedit"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+alias \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	neo="neofetch"
+
+# git
+alias \
+	g="git" \
+  sshb="ssh bandit.labs.overthewire.org -p 2220 -l"
